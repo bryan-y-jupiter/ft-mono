@@ -19,6 +19,16 @@ export const router = createBrowserRouter(
             };
           },
         },
+        {
+          path: '/tailwind',
+          lazy: async () => {
+            const { Component, loader } = await import('@/pages/test');
+            return {
+              loader,
+              Component,
+            };
+          },
+        },
       ],
     },
   ],
