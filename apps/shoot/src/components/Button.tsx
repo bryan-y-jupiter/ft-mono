@@ -28,7 +28,7 @@ export const Button = (props: ButtonProps) => {
       type="button"
       disabled={disabled}
       className={cn(
-        'h-10 rounded-lg border-2 border-[#0d0000] px-5 flex items-center w-max relative overflow-hidden ',
+        'h-9 rounded-[10px] border-2 border-[#0d0000] px-5 flex items-center w-max relative overflow-hidden ',
         !disabled && 'active:opacity-85 active:[&>.text]:top-[2px]',
         className,
       )}
@@ -60,7 +60,7 @@ export const Button = (props: ButtonProps) => {
       />
       <span
         className={cn(
-          'text relative z-3 text-t-white font-extrabold ',
+          'text relative z-3 text-xl text-t-white font-extrabold ',
           disabled && 'text-[#9da7be]',
         )}
       >

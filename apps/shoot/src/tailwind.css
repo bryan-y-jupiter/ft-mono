@@ -29,7 +29,7 @@
   }
 
   :root {
-    @apply text-t-primary font-kanit text-body select-none max-h-[var(--tg-viewport-stable-height,100dvh)] overflow-hidden;
+    @apply text-t-primary select-none max-h-[var(--tg-viewport-stable-height,100dvh)] overflow-hidden;
   }
 
   body {

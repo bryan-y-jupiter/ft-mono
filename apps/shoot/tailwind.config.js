@@ -1,10 +1,12 @@
 import tailwindAnimate from 'tailwindcss-animate'
 import defaultTheme from 'tailwindcss/defaultTheme'
+import { adapter } from './tailwind.adapter'
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    ...adapter(),
     colors: {
       transparent: 'transparent',
       t: {
@@ -85,174 +87,6 @@ export default {
       },
       highLight: 'rgb(var(--colors-highLight) / <alpha-value>)',
       overlay: 'var(--colors-overlay)',
-    },
-    extend: {
-      fontFamily: {
-        kanit: ['"Kanit"', ...defaultTheme.fontFamily.sans],
-      },
-
-      fontSize: {
-        extraSmall: [
-          '0.75rem', // 12px
-          {
-            lineHeight: '1.125rem', // 18px
-            fontWeight: '400',
-            letterSpacing: '0.01em',
-          },
-        ],
-        extraSmallBold: [
-          '0.75rem', // 12px
-          {
-            lineHeight: '1.125rem', // 18px
-            fontWeight: '600',
-            letterSpacing: '0.01em',
-          },
-        ],
-        preTitle: [
-          '0.75rem', // 12px
-          {
-            lineHeight: '1.125rem', // 18px
-            fontWeight: '600',
-            letterSpacing: '0.02em',
-          },
-        ],
-        small: [
-          '0.875rem', // 14px
-          {
-            lineHeight: '1.25rem', // 20px
-            fontWeight: '400',
-          },
-        ],
-        smallBold: [
-          '0.875rem', // 14px
-          {
-            lineHeight: '1.25rem', // 20px
-            fontWeight: '600',
-          },
-        ],
-        body: [
-          '1rem', // 16px
-          {
-            lineHeight: '1.5rem', // 24px
-            fontWeight: '400',
-          },
-        ],
-        bold: [
-          '1rem', // 16px
-          {
-            lineHeight: '1.5rem', // 14px
-            fontWeight: '600',
-          },
-        ],
-        h1Mobile: [
-          '2.5rem', // 40px,
-          {
-            lineHeight: '3rem', // 48px
-            fontWeight: '600',
-            letterSpacing: '-0.01em',
-          },
-        ],
-
-        h2Mobile: [
-          '2rem', // 32px,
-          {
-            lineHeight: '2.375rem', // 38px
-            fontWeight: '600',
-            letterSpacing: '-0.01em',
-          },
-        ],
-        h3: [
-          '1.5rem', // 20px
-          {
-            lineHeight: '2.25rem', // 30px
-            fontWeight: '600',
-            letterSpacing: '-0.01em',
-          },
-        ],
-        h4: [
-          '1.25rem', // 20px
-          {
-            lineHeight: '1.875rem', // 30px
-            fontWeight: '600',
-            letterSpacing: '-0.01em',
-          },
-        ],
-      },
-      boxShadow: {
-        elevation1:
-          '0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 6px 0px rgba(0, 0, 0, 0.04), 0px 0px 1px 0px rgba(90, 92, 116, 0.8) inset',
-        elevation2:
-          '0px 0px 1px 0px rgba(90, 92, 116, 0.9) inset, 0px 7px 14px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px 0px rgba(0, 0, 0, 0.08)',
-        elevation3:
-          '0px 0px 1px 0px rgba(90, 92, 116, 0.9) inset, 0px 16px 32px 0px rgba(0, 0, 0, 0.16), 0px 8px 16px 0px rgba(0, 0, 0, 0.16)',
-      },
-      backgroundColor: {
-        'primary-gradient': 'rgb(var(--colors-interactive-primary) / <alpha-value>)',
-      },
-      keyframes: {
-        flashingProgress: {
-          '0%': {
-            width: 0,
-            left: 0,
-          },
-          '40%': {
-            width: '100%',
-            left: 0,
-          },
-          '60%': {
-            width: '100%',
-            left: 0,
-          },
-          '100%': {
-            width: 0,
-            left: '100%',
-          },
-        },
-        progress: {
-          from: {
-            width: '100%',
-          },
-          to: {
-            width: '0%',
-          },
-        },
-        'accordion-down': {
-          from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
-        },
-        'pules-spinner': {
-          from: { opacity: 1 },
-          to: { opacity: 0 },
-        },
-        spinner: {
-          '0%, 100%': { height: '100%' },
-          '50%': { height: '50%' },
-        },
-        reverseSpin: {
-          '0%': {
-            transform: 'rotate(0deg)',
-          },
-          '100%': {
-            transform: 'rotate(-360deg)',
-          },
-        },
-      },
-      backgroundImage: {
-        'spinner-radial': 'radial-gradient(rgba(0, 0, 0, 0.05) 30%, transparent)',
-        'gradient-141': 'linear-gradient(141deg, var(--tw-gradient-stops))',
-      },
-      animation: {
-        flashProgress: 'flashingProgress 1.8s ease-in-out infinite',
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        spinner: 'spinner 1s ease-in-out infinite',
-        reverseSpin: 'reverseSpin 1s ease 0s infinite',
-        'pules-spinner': 'pules-spinner linear 1.2s infinite',
-      },
     },
     screens: {
       sm: '768px',
