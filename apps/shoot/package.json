@@ -45,6 +45,7 @@
     "react-use": "^17.5.0",
     "recharts": "^2.1.9",
     "slick-carousel": "^1.8.1",
+    "clsx": "catalog:",
     "tss-react": "^3.7.0",
     "use-query-params": "^2.2.0",
     "valtio": "1.11.2",

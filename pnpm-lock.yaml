@@ -9,6 +9,9 @@ catalogs:
     autoprefixer:
       specifier: ^10.4.20
       version: 10.4.20
+    clsx:
+      specifier: ^2.1.1
+      version: 2.1.1
     postcss:
       specifier: ^8.4.44
       version: 8.4.47
@@ -99,6 +102,9 @@ importers:
       async-mutex:
         specifier: ^0.3.2
         version: 0.3.2
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
       date-fns:
         specifier: ^2.28.0
         version: 2.30.0
